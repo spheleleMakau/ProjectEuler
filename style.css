@@ -1,0 +1,89 @@
+ /* Reset default margin and padding */
+ 
+#logo{
+   width: 180px;
+}
+ 
+ body, ul {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: var(--font-default);
+    color: #111
+}
+
+/* Style the navigation menu */
+nav {
+    background-color: #343a40;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the checkbox and label for toggle */
+.nav_toggle {
+    display: none;
+}
+
+.nav_toggle_label {
+    display: none;
+    cursor: pointer;
+}
+
+.nav_toggle_label i {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Show/hide the navigation menu on checkbox toggle */
+.nav_toggle:checked + label + ul {
+    display: block;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav_toggle_label {
+        display: block;
+    }
+
+    ul {
+        display: none;
+    }
+
+    ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav_toggle:checked + label i {
+        transform: rotate(45deg);
+    }
+
+    .nav_toggle:checked + label + ul {
+        display: block;
+    }
+}
+
+
+@media  (max-width:700px) {
+    #logo{width: 180px;}
+   
+}
+
+img{
+    border: none;
+    vertical-align: midd;
+}
