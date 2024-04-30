@@ -1,89 +1,65 @@
- /* Reset default margin and padding */
- 
-#logo{
-   width: 180px;
-}
- 
- body, ul {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    font-family: var(--font-default);
-    color: #111
+/* style.css */
+
+/* Styling the header */
+
+
+#logo img {
+    width: 100px; /* Adjust as needed */
+        height: auto;
+        border: 1px ;
+      
+    
 }
 
-/* Style the navigation menu */
-nav {
-    background-color: #343a40;
-    padding: 20px;
+/* Styling the navigation */
+.container {
+    max-width: 100%;
+    padding: 0 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Style the checkbox and label for toggle */
 .nav_toggle {
     display: none;
 }
 
 .nav_toggle_label {
-    display: none;
     cursor: pointer;
+    display: none; /* Initially hidden */
+    padding: 10px;
+    background-color: #007bff; /* Adjust color as needed */
+    color: #fff; /* Adjust color as needed */
+    text-align: center;
 }
 
-.nav_toggle_label i {
-    color: #fff;
-    font-size: 20px;
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-/* Show/hide the navigation menu on checkbox toggle */
-.nav_toggle:checked + label + ul {
-    display: block;
+.buttons button {
+    width: auto;
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
+.buttons button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
     .nav_toggle_label {
-        display: block;
+        display: block; /* Display only on mobile */
     }
-
-    ul {
+  
+    .buttons {
         display: none;
     }
-
-    ul li {
-        display: block;
-        margin: 10px 0;
+  
+    .nav_toggle:checked + .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
-    .nav_toggle:checked + label i {
-        transform: rotate(45deg);
-    }
-
-    .nav_toggle:checked + label + ul {
-        display: block;
-    }
-}
-
-
-@media  (max-width:700px) {
-    #logo{width: 180px;}
-   
-}
-
-img{
-    border: none;
-    vertical-align: midd;
 }
