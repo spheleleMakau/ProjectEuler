@@ -1,24 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const logoPlaceholder = document.getElementById('logo-placeholder');
-
-    // Load the logo from index.html
-    fetch('../index.html')
-        .then(response => response.text())
-        .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, '/html');
-            const logoImgSrc = doc.querySelector('#logo img').getAttribute('src');
-
-            // Create an image element and set its source
-           
-            // Append the image to the logo placeholder
-            logoPlaceholder.appendChild(logoImgSrc);
-        })
-        .catch(error => console.error('Error fetching logo:', error));
-});
-
-
-
 function sumOfMultiples(limit, num1, num2) {
     let sum = 0;
     for (let i = 1; i < limit; i++) {
@@ -55,6 +34,5 @@ document.getElementById('list-placeholder').innerText = `list of multiples`;
 document.getElementById('sum-placeholder').innerText = `sum of multiples`;
 
 
-// script.js
 
 

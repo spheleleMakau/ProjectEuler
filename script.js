@@ -16,12 +16,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // script.js
 // script.js
-
-function loadProject(url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('main-content').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching project:', error));
-}
