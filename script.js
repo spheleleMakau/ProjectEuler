@@ -1,3 +1,6 @@
+
+// problem1
+
 document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.getElementById('nav_toggle');
     const navButtons = document.querySelector('.buttons');
@@ -47,12 +50,31 @@ function checkAnswer() {
     }
 }
 
-// Update placeholders with calculated values
-const limit = 1000;
-const num1 = 3;
-const num2 = 5;
-const multiplesSum = sumOfMultiples(limit, num1, num2);
-document.getElementById('list-placeholder').innerText = `list of multiples`;
-document.getElementById('sum-placeholder').innerText = `sum of multiples`;
+// // Update placeholders with calculated values
+// const limit = 1000;
+// const num1 = 3;
+// const num2 = 5;
+// const multiplesSum = sumOfMultiples(limit, num1, num2);
+// document.getElementById('list-placeholder').innerText = `list of multiples`;
+// document.getElementById('sum-placeholder').innerText = `sum of multiples`;
 
 
+// Problem 2
+function problem2(){
+    document.getElementById('answerForm').addEventListener('submit', function(event) {
+
+
+
+        var answer = parseInt(document.getElementById('answer')).value;
+        var resultImage = document.getElementById('resultImage');
+
+        if (answer == 4613732) { // Check if the answer is correct
+        alert(`Correct! The answer is ${correctAnswer}.`);
+        resultImage.style.display = 'block'; // Display the picture
+       
+        } else {
+        alert('Sorry, that is incorrect. Please try again.'); // Notify the user if the answer is incorrect
+    }
+});
+
+}
