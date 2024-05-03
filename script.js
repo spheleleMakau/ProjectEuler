@@ -53,13 +53,27 @@ function checkAnswer() {
     }
 }
 
-// // Update placeholders with calculated values
-// const limit = 1000;
-// const num1 = 3;
-// const num2 = 5;
-// const multiplesSum = sumOfMultiples(limit, num1, num2);
-// document.getElementById('list-placeholder').innerText = `list of multiples`;
-// document.getElementById('sum-placeholder').innerText = `sum of multiples`;
+
+// Problem2
+function problem2(event) {
+    event.preventDefault();
+    const limit = parseInt(document.getElementById('limit-input').value);
+    var answer = parseInt(document.getElementById('answer').value);
+   
+    
+   
+    const sum = sumOfEvenFibonacci(limit);
+
+
+    if(answer === sum){
+        resultImage.style.display = 'block';
+    }
+
+    else{
+        alert('Sorry, that is incorrect. Please try again.');
+    } 
+}
+
 
 
 
