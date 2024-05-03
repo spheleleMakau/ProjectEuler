@@ -3,17 +3,23 @@
 // problem1
 
 document.addEventListener('DOMContentLoaded', function () {
-    const navToggle = document.getElementById('nav_toggle');
-    const navButtons = document.querySelector('.buttons');
+    const navToggle = document.getElementById('navbar-toggler');
+    const navButtons = document.querySelector('#buttons');
 
-    navToggle.addEventListener('change', function () {
-        if (this.checked) {
-            navButtons.style.display = 'flex';
-        } else {
-            navButtons.style.display = 'none';
-        }
-    });
+    // Check if navToggle and navButtons exist before adding event listener
+    if (navToggle && navButtons) {
+        navToggle.addEventListener('change', function () {
+            if (this.checked) {
+                navButtons.style.display = 'flex';
+            } else {
+                navButtons.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('buttons or elements with class "buttons" not found.');
+    }
 });
+
 
 
 function loadContent(url) {
@@ -93,8 +99,32 @@ function sumOfEvenFibonacci(limit) {
 }
 
 
+//  problem3
+
+function problem3(event) {
+    event.preventDefault();
+
+    const primeNumber = parseInt(document.getElementById('number').value);
+    const largestPrimeFactor = findLargestPrimeFactor(primeNumber);
+    let answer = parseInt(document.getElementById('submit'));
 
 
 
+    alert(`The largest prime factor of ${primeNumber} is: ${largestPrimeFactor}`);
+
+}
+
+function findLargestPrimeFactor(number) {
+    let divisor = 2;
+    while (number !== 1) {
+        if (number % divisor === 0) {
+            number /= divisor;
+        } else {
+            divisor++;
+        }
+    }
+    return divisor;
+}
 
 
+  
