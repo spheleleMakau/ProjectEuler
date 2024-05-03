@@ -64,6 +64,29 @@ function problem2(event) {
    
     const sum = sumOfEvenFibonacci(limit);
 
+
+    if(answer === sum){
+        resultImage.style.display = 'block';
+    }
+
+    else{
+        alert('Sorry, that is incorrect. Please try again.');
+    } 
+}
+
+
+
+
+// Problem2
+function problem2(event) {
+    event.preventDefault();
+    const limit = parseInt(document.getElementById('limit-input').value);
+    var answer = parseInt(document.getElementById('answer').value);
+   
+    
+   
+    const sum = sumOfEvenFibonacci(limit);
+
     if(answer === sum){
         resultImage.style.display = 'block';
     }
