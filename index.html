@@ -40,38 +40,36 @@
 <!-- main content -->
     <main class="container-fluid p-0">
 <!-- Nav Bar -->
-<div class="row justify-content-center">
-    <div class="col-md-10 col-lg-10">
-        <nav class="navbar navbar-expand-lg navbar-light nav">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-outline-secondary text-dark" onclick="loadContent('../project1/index.html')">Multiples of 3 or 5</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-outline-secondary text-dark" onclick="loadContent('../project2/index.html')">Even Fibonacci Numbers</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-outline-secondary text-dark" onclick="loadContent('../project3/index.html')">Largest Prime Factor</button>
-                    </li>
-                    <!-- Add more buttons for other problems -->
-                </ul>
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-10">
+                <nav class="navbar navbar-expand-lg navbar-light nav">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-outline-secondary text-dark" onclick="loadContent('../project1/index.html')">Multiples of 3 or 5</button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-outline-secondary text-dark" onclick="loadContent('../project2/index.html')">Even Fibonacci Numbers</button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-outline-secondary text-dark" onclick="loadContent('../project3/index.html')">Largest Prime Factor</button>
+                            </li>
+                            <!-- Add more buttons for other problems -->
+                        </ul>
+                    </div>
+                </nav>
             </div>
-        </nav>
-        <div class="row justify-content-center" id="loadedContent">
-            <!-- Content will be loaded here -->
+   
         </div>
-    </div>
-</div>
-
-  
-<!-- Problems Content -->
-        
+        <div class="row justify-content-center" id="loadedContent">
+         <!-- Content will be loaded here -->
+        </div>
+                
 <!-- results Image -->
         <div id="resultImage">
             <img src="../themes/answer_correct.png" alt="Correct Answer">

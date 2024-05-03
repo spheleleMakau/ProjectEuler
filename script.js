@@ -1,4 +1,5 @@
 
+var resultImage = document.getElementById('resultImage');
 // problem1
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 function loadContent(url) {
     fetch(url)
@@ -33,13 +35,14 @@ function sumOfMultiples(limit, num1, num2) {
     return sum;
 }
 
+
 function checkAnswer() {
     const userAnswer = parseInt(document.getElementById('total-input').value);
     const limit = parseInt(document.getElementById('limit-input').value);
     const num1 = parseInt(document.getElementById('num1-input').value);
     const num2 = parseInt(document.getElementById('num2-input').value);
     const correctAnswer = sumOfMultiples(limit, num1, num2);
-    var resultImage = document.getElementById('resultImage');
+
    
 
     if (userAnswer === correctAnswer) { // Check if the answer is correct
@@ -59,22 +62,42 @@ function checkAnswer() {
 // document.getElementById('sum-placeholder').innerText = `sum of multiples`;
 
 
-// Problem 2
-function problem2(){
-    document.getElementById('answerForm').addEventListener('submit', function(event) {
 
+// Problem2
+function problem2(event) {
+    event.preventDefault();
+    const limit = parseInt(document.getElementById('limit-input').value);
+    var answer = parseInt(document.getElementById('answer').value);
+   
+    
+   
+    const sum = sumOfEvenFibonacci(limit);
 
-
-        var answer = parseInt(document.getElementById('answer')).value;
-        var resultImage = document.getElementById('resultImage');
-
-        if (answer == 4613732) { // Check if the answer is correct
-        alert(`Correct! The answer is ${correctAnswer}.`);
-        resultImage.style.display = 'block'; // Display the picture
-       
-        } else {
-        alert('Sorry, that is incorrect. Please try again.'); // Notify the user if the answer is incorrect
+    if(answer === sum){
+        resultImage.style.display = 'block';
     }
-});
 
+    else{
+        alert('Sorry, that is incorrect. Please try again.');
+    } 
 }
+
+
+function sumOfEvenFibonacci(limit) {
+    let number = limit;
+    let sum = 0, a = 1, b = 2,c;
+    while (b < number) {
+        if (b % 2 == 0) {
+            sum = sum + b;
+    }
+        c = a + b,a = b, b = c;
+    }
+    return sum;
+}
+
+
+
+
+
+
+

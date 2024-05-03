@@ -51,4 +51,7 @@
 
 #resultImage{
     display: none;
+    position: relative;
+    top: 20px; /* Adjust as needed */
+    text-align: center;
 }
