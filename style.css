@@ -51,7 +51,16 @@
 
 #resultImage{
     display: none;
-    position: relative;
-    top: 20px; /* Adjust as needed */
-    text-align: center;
+    margin: 50px auto;
+}
+
+
+#answerDisplay
+{
+    display: none;
+    padding:20px;
+    background-color: #efb762;
+    margin: 50px auto;
+    box-shadow: 0 0 2px 2px #efb762;
+
 }

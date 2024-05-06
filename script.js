@@ -50,12 +50,24 @@ function checkAnswer() {
     const limit = parseInt(document.getElementById('limit-input').value);
     const num1 = parseInt(document.getElementById('num1-input').value);
     const num2 = parseInt(document.getElementById('num2-input').value);
+    
+    
+    
     const correctAnswer = sumOfMultiples(limit, num1, num2);
 
    
 
     if (userAnswer === correctAnswer) { // Check if the answer is correct
-        resultImage.style.display = 'block'; // Display the picture
+        resultImage.style.display = 'block'; // Display the picture   
+        let answerDisplay = (document.getElementById('answerDisplay'));
+        answerDisplay.style.display = 'block';
+        // Display the correct answer
+        answerDisplay.innerHTML = `<h3>Congratulations!</h3>
+                                   <p>Your answer (${userAnswer}) is correct!</p>
+                                   <p>The correct answer is ${correctAnswer}.</p>`;
+        resultImage.scrollIntoView({ behavior: 'smooth' });
+        answerDisplay.scrollIntoView({ behavior: 'smooth' });
+
     
     } else {
         alert('Sorry, that is incorrect. Please try again.'); // Notify the user if the answer is incorrect
@@ -77,6 +89,7 @@ function problem2(event) {
     const sum = sumOfEvenFibonacci(limit);
 
     if(answer === sum){
+
         resultImage.style.display = 'block';
     }
 
@@ -106,11 +119,11 @@ function problem3(event) {
 
     const primeNumber = parseInt(document.getElementById('number').value);
     const largestPrimeFactor = findLargestPrimeFactor(primeNumber);
-    let answer = parseInt(document.getElementById('submit'));
-
-
-
-    alert(`The largest prime factor of ${primeNumber} is: ${largestPrimeFactor}`);
+    
+    let answer = (document.getElementById('answerDisplay'));
+    answer.style.display = 'block';
+    answer.innerHTML = `The largest prime factor of ${primeNumber} is: ${largestPrimeFactor}`
+    answer.scrollIntoView({ behavior: 'smooth' });
 
 }
 
