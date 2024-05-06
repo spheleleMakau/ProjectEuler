@@ -10,7 +10,7 @@ This repository contains solutions to various Project Euler problems implemented
 
   
 ### Project Structure
-The project structure is organized into folders, each corresponding to a specific Project Euler problem. Here's the structure:
+The project structure is organized into folders use the index.html on the root, each corresponding to a specific Project Euler problem. Here's the structure:
 
 * project1/: Contains files related to Problem 1 - Multiples of 3 and 5.
 * project2/: Contains files related to Problem 2 - Even Fibonacci Numbers.
@@ -19,10 +19,10 @@ The project structure is organized into folders, each corresponding to a specifi
 
 # How to Use
 
-To use this project, open the index.html file in a web browser. This file serves as the main entry point for the Project Euler solutions. From there, you'll find links or buttons to navigate to individual HTML files corresponding to each problem.
+To use this project, open the root index.html file in a web browser. This file serves as the main entry point for the Project Euler solutions. From there, you'll find links or buttons to navigate to individual HTML files corresponding to each problem.
 
-- Open index.html in your preferred web browser.
-- Navigate to the specific problem you want to solve by clicking on the corresponding link or button.
+- Open root index.html in your preferred web browser.
+- Navigate to the specific problem you want to solve by clicking on the corresponding button.
 - Each problem's HTML page contains the problem statement, input fields for answers, and a button to submit your answer.
 - Read the problem statement carefully, input your answer, and click the submit button to check if your answer is correct.
 - If your answer is correct, you'll receive feedback and see any relevant result images or information.
