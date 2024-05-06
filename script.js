@@ -83,14 +83,23 @@ function problem2(event) {
     resultImage.style.display = 'none';
     const limit = parseInt(document.getElementById('limit-input').value);
     var answer = parseInt(document.getElementById('answer').value);
+    let answerDisplay = (document.getElementById('answerDisplay'));
    
     
    
     const sum = sumOfEvenFibonacci(limit);
 
     if(answer === sum){
-
         resultImage.style.display = 'block';
+        answerDisplay.style.display = 'block';
+        // Display the correct answer
+        answerDisplay.innerHTML = `<h3>Congratulations!</h3>
+                                   <p>Your answer (${answer}) is correct!</p>
+                                   <p>The sum of the even-valued terms is ${sum}.</p>`;
+        resultImage.scrollIntoView({ behavior: 'smooth' });
+        answerDisplay.scrollIntoView({ behavior: 'smooth' });
+       
+
     }
 
     else{
