@@ -45,7 +45,9 @@ function sumOfMultiples(limit, num1, num2) {
 function checkAnswer() {
     
     var resultImage = document.getElementById('resultImage');
+    let answerDisplay = (document.getElementById('answerDisplay'));
     resultImage.style.display = 'none';
+    answerDisplay.style.display = 'none'
     const userAnswer = parseInt(document.getElementById('total-input').value);
     const limit = parseInt(document.getElementById('limit-input').value);
     const num1 = parseInt(document.getElementById('num1-input').value);
@@ -59,7 +61,6 @@ function checkAnswer() {
 
     if (userAnswer === correctAnswer) { // Check if the answer is correct
         resultImage.style.display = 'block'; // Display the picture   
-        let answerDisplay = (document.getElementById('answerDisplay'));
         answerDisplay.style.display = 'block';
         // Display the correct answer
         answerDisplay.innerHTML = `<h3>Congratulations!</h3>
@@ -80,10 +81,12 @@ function problem2(event) {
     event.preventDefault();
     
     var resultImage = document.getElementById('resultImage');
+    let answerDisplay = (document.getElementById('answerDisplay'));
     resultImage.style.display = 'none';
+    answerDisplay.style.display = 'none';
     const limit = parseInt(document.getElementById('limit-input').value);
     var answer = parseInt(document.getElementById('answer').value);
-    let answerDisplay = (document.getElementById('answerDisplay'));
+    
    
     
    
@@ -128,8 +131,8 @@ function problem3(event) {
 
     const primeNumber = parseInt(document.getElementById('number').value);
     const largestPrimeFactor = findLargestPrimeFactor(primeNumber);
-    
     let answer = (document.getElementById('answerDisplay'));
+    answer.style.display = 'none';
     answer.style.display = 'block';
     answer.innerHTML = `The largest prime factor of ${primeNumber} is: ${largestPrimeFactor}`
     answer.scrollIntoView({ behavior: 'smooth' });
