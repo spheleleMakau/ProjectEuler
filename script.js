@@ -71,7 +71,10 @@ function checkAnswer() {
 
     
     } else {
-        alert('Sorry, that is incorrect. Please try again.'); // Notify the user if the answer is incorrect
+        answerDisplay.style.display = 'block';
+        answerDisplay.innerHTML = `<h3>OH NO!!</h3>
+        <p>Your answer (${userAnswer}) is incorrect!</p>
+        <p>The correct answer is ${correctAnswer}.</p>`; // Notify the user if the answer is incorrect
     }
 }
 
@@ -106,7 +109,10 @@ function problem2(event) {
     }
 
     else{
-        alert('Sorry, that is incorrect. Please try again.');
+        answerDisplay.style.display = 'block';
+        answerDisplay.innerHTML = `<h3>OH NO!!</h3>
+        <p>Your answer (${answer}) is incorrect!</p>
+        <p>The sum of the even-valued terms is ${sum}.</p>`;
     } 
 }
 
