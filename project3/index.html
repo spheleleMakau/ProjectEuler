@@ -15,19 +15,23 @@
             <h2>Largest Prime Factor</h2>
             <h3>Problem 3</h3>
             <p>
+        </div>
+        <div class="card-body">
                 The prime factors of 13195 are 5,7,13 and 29.
                 <br>
                 What is the largest prime factor of the number 600851475143?   
             </p>
         </div>
-        <div class="data_entry">
-
-            <div class="row"><div class="cell right w200">Answer:&nbsp;&nbsp;</div><div class="cell"><input size="20" type="text" name="guess_3" id="guess" maxlength="30" autofocus=""></div><input type="hidden" name="csrf_token" value="5773294c688edb4932a6dcdb11f786b3FUC+sbbud67FIaUvLKibw34W79CDJ3+hYuF1d5fYlzKez27IIPuDmxW/sXordBn462QGKxhA8iS8LwT7LZCUzfNyjw=="></div>
-               <div class="row">
-               <div class="cell last"><input type="submit" value="Check"></div>
-               </div>
-            </div>
+   
+        <div class="card-footer">
+              
+            <label for="number">largest prime of:</label>
+            <input type="text" id="number" name="number">
+            <button type="submit" onclick="problem3(event)">Submit</button>
+        </div>
+        <div class="card"id="answerDisplay"></div>
     </div>
+   
 
     <script src="./script.js"></script>
 </body>
